@@ -1,4 +1,15 @@
-allowedHWIDs = {
-    "CC341C50-CCFC-4E28-864C-425F627D86F2",  -- First allowed HWID
-    "A57B4E88-9C99-44B7-9899-5C94DB4B2C4A",  -- Second allowed HWID
-}
+local playerHWID = game:GetService("RbxAnalyticsService"):GetClientId()
+
+local isAllowed = false
+for _, hwid in pairs(allowedHWIDs) do
+    if playerHWID == hwid then
+        isAllowed = true
+        break
+    end
+end
+
+if not isAllowed then
+    return
+end
+
+print("hi")
