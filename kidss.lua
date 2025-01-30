@@ -11,3 +11,5 @@ end
 if not isAllowed then
     return
 end
+
+print("hi")
