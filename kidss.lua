@@ -6,6 +6,6 @@ local allowedHWIDs = {
 
 local scriptContent = game:HttpGet("https://raw.githubusercontent.com/dksijide/c/refs/heads/main/kids.lua")
 
-	scriptContent = "local allowedHWIDs = ...\n" .. scriptContent
+	scriptContent = "local allowedHWIDs, Window, Fluent = ...\n" .. scriptContent
 	local func = loadstring(scriptContent)
-	func(allowedHWIDs)
+	func(allowedHWIDs, Window, Fluent)
